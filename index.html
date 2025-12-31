@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ellissa Oliver | Personal Training Perth</title>
+  <meta name="description"
+    content="Personal training in Perth for women who want to feel powerful without giving up their life. Strength training, good conversation, and no diet culture.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.20/dist/lenis.css">
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html.lenis,
+    html.lenis body {
+      height: auto;
+    }
+
+    html {
+      scroll-padding-top: 5rem;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .word-reveal span {
+      color: #d4d4d8;
+      transition: color 0.3s ease;
+    }
+
+    .word-reveal span.revealed {
+      color: #18181b;
+    }
+
+    .magnetic-btn {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .magnetic-btn-inner {
+      transition: transform 0.2s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+
+    .fancy-underline {
+      background-image: linear-gradient(90deg, currentColor 0%, currentColor 100%);
+      background-repeat: no-repeat;
+      background-size: 0% 1px;
+      background-position: left bottom;
+      transition: background-size 0.4s ease;
+    }
+
+    .fancy-underline:hover {
+      background-size: 100% 1px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .img-hover {
+      overflow: hidden;
+    }
+
+    .img-hover img {
+      transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @media (hover: hover) {
+      .img-hover:hover img {
+        transform: scale(1.03);
+      }
+    }
+
+    .hide-scrollbar {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-zinc-900 font-sans antialiased">
+
+  <!-- Nav -->
+  <nav
+    class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-zinc-100 lg:bg-transparent lg:border-0 lg:mix-blend-difference">
+    <div class="max-w-[1600px] mx-auto px-5 md:px-8 lg:px-10 py-4 lg:py-6 flex justify-between items-center">
+      <span class="text-zinc-900 lg:text-white text-sm font-medium tracking-wide">Ellissa Oliver</span>
+      <a href="https://instagram.com/ellissaoliver" target="_blank"
+        class="text-zinc-900 lg:text-white text-sm tracking-wide fancy-underline pb-0.5">@ellissaoliver</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="min-h-screen relative pt-14 lg:pt-0">
+    <div class="flex flex-col lg:grid lg:grid-cols-12 min-h-screen">
+      <div class="h-[60dvh] lg:h-auto lg:col-span-7 relative overflow-hidden img-hover">
+        <div class="absolute inset-0">
+          <img src="hero.png" alt="Ellissa Oliver" class="w-full h-full object-cover object-top">
+        </div>
+      </div>
+      <div
+        class="flex-1 lg:col-span-5 flex flex-col justify-center lg:justify-end p-6 md:p-10 lg:p-16 bg-white min-h-[40dvh]">
+        <div class="max-w-md">
+          <p class="text-xs md:text-sm tracking-widest uppercase text-zinc-400 mb-4 md:mb-6 fade-in">Personal Training ·
+            Perth</p>
+          <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-[0.95] tracking-tight fade-in"
+            style="transition-delay: 0.1s;">
+            Strong looks<br>
+            really good<br>
+            on you.
+          </h1>
+          <p class="mt-5 md:mt-8 text-zinc-500 text-sm md:text-lg leading-relaxed fade-in"
+            style="transition-delay: 0.2s;">
+            Personal training for women who think life’s too short for boring workouts.
+          </p>
+          <div class="mt-8 md:mt-10 fade-in" style="transition-delay: 0.3s;">
+            <a href="#start"
+              class="magnetic-btn px-6 md:px-8 py-3.5 md:py-4 bg-zinc-900 text-white text-sm font-medium tracking-wide rounded-full inline-block">
+              <span class="magnetic-btn-inner">Let's talk →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statement -->
+  <section class="py-16 md:py-24 lg:py-40">
+    <div class="max-w-[1600px] mx-auto px-5 md:px-8 lg:px-10">
+      <div class="max-w-4xl lg:max-w-5xl">
+        <h2 class="font-serif text-xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.2] md:leading-[1.1] word-reveal"
+          data-word-reveal>
+          An hour of great conversation that happens to make you stronger. That's the whole idea.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Grid -->
+  <section class="pb-16 md:pb-24 lg:pb-40">
+    <div class="max-w-[1600px] mx-auto px-5 md:px-8 lg:px-10">
+      <div class="flex flex-col md:grid md:grid-cols-12 gap-4 md:gap-5 lg:gap-6">
+        <!-- Large - Training -->
+        <div class="md:col-span-7 md:row-span-2 fade-in img-hover">
+          <div class="aspect-[4/5] bg-zinc-100 rounded-sm overflow-hidden">
+            <img src="training.jpg" alt="Training session" class="w-full h-full object-cover" loading="lazy">
+          </div>
+        </div>
+        <!-- Small 1 - Group -->
+        <div class="md:col-span-5 fade-in img-hover" style="transition-delay: 0.1s;">
+          <div class="aspect-[16/10] md:aspect-[4/3] bg-zinc-100 rounded-sm overflow-hidden">
+            <img src="group.png" alt="Group training" class="w-full h-full object-cover" loading="lazy">
+          </div>
+        </div>
+        <!-- Small 2 - Lifestyle with testimonial -->
+        <div class="md:col-span-5 relative fade-in img-hover" style="transition-delay: 0.2s;">
+          <div class="aspect-[16/10] md:aspect-[4/3] bg-zinc-100 rounded-sm overflow-hidden">
+            <img src="wide-banner.png" alt="Living life" class="w-full h-full object-cover object-bottom"
+              loading="lazy">
+          </div>
+          <div
+            class="mt-4 md:mt-0 md:absolute md:-bottom-6 md:-left-6 lg:-bottom-8 lg:-left-8 bg-white p-4 md:p-5 lg:p-6 md:max-w-xs md:shadow-sm">
+            <p class="text-sm text-zinc-600 leading-relaxed">
+              "The hour flies by. We laugh the whole time and somehow I've gotten stronger."
+            </p>
+            <p class="text-xs text-zinc-400 mt-2">— Kate, 52</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-16 md:py-24 lg:py-40 bg-zinc-50">
+    <div class="max-w-[1600px] mx-auto px-5 md:px-8 lg:px-10">
+      <div class="flex flex-col lg:grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-20 items-start">
+        <!-- Portrait -->
+        <div class="w-full lg:col-span-5 lg:col-start-2 fade-in img-hover">
+          <div class="aspect-[3/4] bg-zinc-200 rounded-sm overflow-hidden">
+            <img src="portrait.png" alt="Ellissa" class="w-full h-full object-cover object-top" loading="lazy">
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="w-full lg:col-span-5 lg:pt-12 xl:pt-20 fade-in" style="transition-delay: 0.1s;">
+          <h2 class="font-serif text-2xl md:text-4xl lg:text-5xl leading-[1.1]">
+            Hi, I'm Ellissa.
+          </h2>
+          <div class="mt-6 md:mt-8 space-y-4 md:space-y-5 text-zinc-600 text-sm md:text-lg leading-relaxed">
+            <p>
+              I'm a personal trainer in Perth and I genuinely love my job. I get to spend my days helping women feel
+              strong, capable, and honestly pretty powerful.
+            </p>
+            <p>
+              My sessions are equal parts training and talking — about life, travel, work, whatever's going on.
+              The strength part just happens along the way.
+            </p>
+            <p>
+              If you're looking for someone to yell at you, I'm not your girl. If you want to get strong
+              while having a really good time, let's chat.
+            </p>
+          </div>
+          <a href="https://instagram.com/ellissaoliver" target="_blank"
+            class="inline-flex items-center gap-2 mt-8 md:mt-10 text-sm font-medium tracking-wide group">
+            <span class="fancy-underline pb-0.5">Follow along on Instagram</span>
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none"
+              stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pull quote -->
+  <section class="py-16 md:py-24 lg:py-32 border-y border-zinc-200">
+    <div class="max-w-[1000px] lg:max-w-[1200px] mx-auto px-5 md:px-8 lg:px-10 text-center">
+      <p class="font-serif text-xl md:text-3xl lg:text-4xl xl:text-5xl leading-[1.2] md:leading-[1.15] word-reveal"
+        data-word-reveal>
+        Life's too short for workouts you dread. This one you'll actually want to show up to.
+      </p>
+    </div>
+  </section>
+
+  <!-- What to expect -->
+  <section class="py-16 md:py-24 lg:py-40">
+    <div class="max-w-[1600px] mx-auto px-5 md:px-8 lg:px-10">
+      <div class="flex flex-col lg:grid lg:grid-cols-2 gap-10 md:gap-12 lg:gap-24">
+        <div class="lg:sticky lg:top-32 lg:self-start fade-in">
+          <p class="text-xs md:text-sm tracking-[0.2em] md:tracking-[0.3em] uppercase text-zinc-400 mb-3 md:mb-4">What
+            we do</p>
+          <h2 class="font-serif text-2xl md:text-4xl lg:text-5xl leading-[1.1]">
+            The fun stuff.
+          </h2>
+        </div>
+        <div class="space-y-10 md:space-y-12 lg:space-y-16">
+          <div class="fade-in">
+            <h3 class="text-base md:text-xl font-medium mb-2 md:mb-3">Strength training that works</h3>
+            <p class="text-zinc-500 text-sm md:text-base leading-relaxed">Squats, deadlifts, presses, rows — the
+              classics.
+              Progressive programming that builds real, functional strength. The kind where you notice everyday things
+              getting easier.</p>
+          </div>
+          <div class="fade-in">
+            <h3 class="text-base md:text-xl font-medium mb-2 md:mb-3">Conversation built in</h3>
+            <p class="text-zinc-500 text-sm md:text-base leading-relaxed">We talk about everything. Work, travel,
+              weekend plans,
+              that restaurant you just tried. It's an hour that actually flies by — like catching up with a friend who
+              happens to be holding a stopwatch.</p>
+          </div>
+          <div class="fade-in">
+            <h3 class="text-base md:text-xl font-medium mb-2 md:mb-3">Works around your life</h3>
+            <p class="text-zinc-500 text-sm md:text-base leading-relaxed">Got a trip coming up? Kids' school thing? Just
+              not
+              feeling it this week? All good. We'll find times that work and roll with whatever life throws at you.</p>
+          </div>
+          <div class="fade-in">
+            <h3 class="text-base md:text-xl font-medium mb-2 md:mb-3">You'll actually want to come back</h3>
+            <p class="text-zinc-500 text-sm md:text-base leading-relaxed">Most of my clients have been with me for
+              years. They keep
+              showing up because it's genuinely enjoyable — and because carrying all the shopping bags in one trip feels
+              incredible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wide image break -->
+  <section class="fade-in">
+    <div class="aspect-[16/9] md:aspect-[21/9] lg:aspect-[3/1] bg-zinc-100 overflow-hidden">
+      <img src="pool.jpg" alt="Living life" class="w-full h-full object-cover" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 md:py-24 lg:py-40 bg-zinc-900 text-white">
+    <div class="max-w-[1600px] mx-auto px-5 md:px-8 lg:px-10 mb-8 md:mb-12">
+      <p class="text-xs md:text-sm tracking-[0.2em] md:tracking-[0.3em] uppercase text-zinc-500">Kind words</p>
+    </div>
+    <div class="overflow-x-auto hide-scrollbar">
+      <div class="flex gap-4 md:gap-6 px-5 md:px-8 lg:px-10 w-max pb-4">
+        <div
+          class="w-[280px] md:w-[340px] lg:w-[400px] flex-shrink-0 border border-zinc-700 p-6 md:p-8 lg:p-10 rounded-sm fade-in">
+          <p class="font-serif text-lg md:text-2xl lg:text-3xl leading-snug">
+            "I've never laughed so much during a workout. Also I can now carry all the groceries in one trip."
+          </p>
+          <p class="mt-6 md:mt-8 text-xs md:text-sm text-zinc-500">Sarah, 52</p>
+        </div>
+        <div
+          class="w-[280px] md:w-[340px] lg:w-[400px] flex-shrink-0 border border-zinc-700 p-6 md:p-8 lg:p-10 rounded-sm fade-in"
+          style="transition-delay: 0.1s;">
+          <p class="font-serif text-lg md:text-2xl lg:text-3xl leading-snug">
+            "Training with Ellissa is the highlight of my week. Genuinely."
+          </p>
+          <p class="mt-6 md:mt-8 text-xs md:text-sm text-zinc-500">Michelle, 48</p>
+        </div>
+        <div
+          class="w-[280px] md:w-[340px] lg:w-[400px] flex-shrink-0 border border-zinc-700 p-6 md:p-8 lg:p-10 rounded-sm fade-in"
+          style="transition-delay: 0.2s;">
+          <p class="font-serif text-lg md:text-2xl lg:text-3xl leading-snug">
+            "Three years in and I still look forward to every session. My husband thinks I've been body-snatched."
+          </p>
+          <p class="mt-6 md:mt-8 text-xs md:text-sm text-zinc-500">Kate, 55</p>
+        </div>
+        <div
+          class="w-[280px] md:w-[340px] lg:w-[400px] flex-shrink-0 border border-zinc-700 p-6 md:p-8 lg:p-10 rounded-sm fade-in"
+          style="transition-delay: 0.3s;">
+          <p class="font-serif text-lg md:text-2xl lg:text-3xl leading-snug">
+            "Best decision I made this year. Apart from the Margaret River trip."
+          </p>
+          <p class="mt-6 md:mt-8 text-xs md:text-sm text-zinc-500">Jenny, 61</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="start" class="py-16 md:py-24 lg:py-40">
+    <div class="max-w-[1600px] mx-auto px-5 md:px-8 lg:px-10">
+      <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 md:gap-12 lg:gap-24 items-center">
+        <div class="w-full fade-in">
+          <p class="text-xs md:text-sm tracking-[0.2em] md:tracking-[0.3em] uppercase text-zinc-400 mb-4 md:mb-6">Let's
+            go</p>
+          <h2 class="font-serif text-2xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.05]">
+            Keen? Let's have a chat.
+          </h2>
+          <p class="mt-4 md:mt-6 text-zinc-500 text-sm md:text-lg leading-relaxed max-w-md">
+            Send me a message on Instagram and tell me a bit about yourself. We'll figure out if we're a good fit — no
+            pressure, just a conversation.
+          </p>
+          <div class="mt-8 md:mt-10">
+            <a href="https://instagram.com/ellissaoliver" target="_blank"
+              class="magnetic-btn px-6 md:px-8 py-3.5 md:py-4 bg-zinc-900 text-white text-sm font-medium tracking-wide rounded-full inline-block">
+              <span class="magnetic-btn-inner">Message me on Instagram</span>
+            </a>
+          </div>
+        </div>
+        <div class="w-full fade-in img-hover" style="transition-delay: 0.1s;">
+          <div class="aspect-square md:aspect-[4/5] lg:aspect-square bg-zinc-100 rounded-sm overflow-hidden">
+            <img src="cta-portrait.png" alt="Ellissa" class="w-full h-full object-cover object-top" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 md:py-12 border-t border-zinc-200">
+    <div class="max-w-[1600px] mx-auto px-5 md:px-8 lg:px-10">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-6">
+        <div>
+          <p class="font-serif text-lg md:text-xl">Ellissa Oliver</p>
+          <p class="text-xs md:text-sm text-zinc-400 mt-1">Personal Training · Perth, Western Australia</p>
+        </div>
+        <div class="flex gap-6 md:gap-8 text-sm">
+          <a href="https://instagram.com/ellissaoliver" target="_blank" class="fancy-underline pb-0.5">Instagram</a>
+          <a href="mailto:hello@ellissaoliver.com" class="fancy-underline pb-0.5">Email</a>
+        </div>
+      </div>
+      <div class="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-zinc-100 text-xs text-zinc-400">
+        © 2025 Ellissa Oliver. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Lenis smooth scroll
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      smooth: true,
+      smoothTouch: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Word-by-word reveal
+    document.querySelectorAll('[data-word-reveal]').forEach(el => {
+      const text = el.textContent;
+      const words = text.split(/\s+/);
+      el.innerHTML = words.map(word => `<span>${word}</span>`).join(' ');
+    });
+
+    function updateWordReveal() {
+      document.querySelectorAll('[data-word-reveal]').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const elementCenter = rect.top + rect.height / 2;
+        const startPoint = windowHeight;
+        const endPoint = windowHeight * 0.3;
+
+        const words = el.querySelectorAll('span');
+        words.forEach((word, index) => {
+          const wordProgress = index / words.length;
+          const triggerPoint = startPoint - (startPoint - endPoint) * wordProgress;
+
+          if (elementCenter < triggerPoint) {
+            word.classList.add('revealed');
+          } else {
+            word.classList.remove('revealed');
+          }
+        });
+      });
+    }
+
+    lenis.on('scroll', updateWordReveal);
+    updateWordReveal();
+
+    // Magnetic button (desktop only)
+    if (window.innerWidth > 768) {
+      document.querySelectorAll('.magnetic-btn').forEach(btn => {
+        const inner = btn.querySelector('.magnetic-btn-inner');
+
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+
+          btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+          if (inner) inner.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = 'translate(0, 0)';
+          if (inner) inner.style.transform = 'translate(0, 0)';
+        });
+      });
+    }
+
+    // Fade in on scroll
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+  </script>
+
+</body>
+
+</html>
