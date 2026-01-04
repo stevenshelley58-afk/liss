@@ -3,6 +3,7 @@ import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, ReferenceL
 import { ChevronDown, Plus, Minus, Check, X, ArrowRight, Play } from 'lucide-react';
 import heroImage from './assets/marin-longevity-hero.png';
 import classImage from './assets/longevity-club-class.png';
+import Website from './Website';
 
 export default function EllissaOliverPage() {
   // Calculator State
@@ -831,26 +832,14 @@ export default function EllissaOliverPage() {
           <p className="text-sm font-medium text-neutral-400 mb-4 tracking-wide">09</p>
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-semibold">The Result</h2>
-            <a
-              href="http://localhost:8080"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm font-medium text-neutral-900 hover:text-neutral-600 transition-colors"
-            >
-              Open in new tab <ArrowRight size={16} />
-            </a>
           </div>
           <p className="text-lg text-neutral-600 mb-8">
             This is the live build. It uses the logic above to filter for the right people.
           </p>
         </div>
 
-        <div className="w-full border-y border-neutral-200 bg-white shadow-xl">
-          <iframe
-            src="http://localhost:8080"
-            className="w-full h-[800px] border-0"
-            title="Ellissa Oliver Website"
-          />
+        <div className="w-full border-t border-neutral-200">
+          <Website />
         </div>
       </section>
 
